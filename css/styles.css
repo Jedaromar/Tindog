@@ -1,0 +1,180 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/**HEADINGS**/
+.big-heading {
+  font-family: 'Montserrat-Black', sans-serif;
+  /*** from google fonts, we can put just -blavk instead of changing the font weight (you have to select the specific one)*****/
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+  /*** montserrat-Black no funciona, even if I downloaded it lol****/
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/*CONTAINERS*/
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/*SECTIONS*/
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* NAV-BAR */
+.navbar {
+  padding: 0 0 4.5rem;
+  /*We do this to align the navbar with the h1. Navbar comes with a default padding!*/
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+  /*no need for rem cos we dont care if it is responsive, we have enough responsiveness with the menu*/
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* DOWNLOAD BUTTONS */
+/* Add a costume class. Dont be lazy and use the bootstrap one cos maybe you will want to use that button in another section with diff margin or smth like that   */
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/*TITLE*/
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+
+/* TITLE IMAGE */
+.title-image {
+  width: 60%;
+  /*of the parent*/
+  transform: rotate(25deg);
+  /*deg means degrees. Negative to the left. Positive to the right*/
+  position: absolute;
+  right: 30%
+    /*to allign it a bit with the navbar*/
+}
+
+/* FEATURES */
+#features {
+  position: relative;
+  /*we choose relative cos it will mantain the flow of the page*/
+  /*z-index: 1;  we change it here and not in the image cos if we put image to -1 it will be behind the pink too. We can delete this cos positioned elements are always on top*/
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 5%;
+  /*text looks shorter and easier to read*/
+}
+
+.features-icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.features-icon:hover {
+  /* I dont like this... looks like a burron*/
+  color: #ff4c68;
+}
+
+/* TESTIMONIAL */
+#testimonials {
+  /*same as in features so it is uniform*/
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* PRESS */
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* PRICING */
+#pricing {
+  padding: 100px;
+  /*you put the paddings in the containers of the things?*/
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+@media (max-width: 1028px) {
+  .title-image {
+    position: static;
+    /*so when it goes under this, the image takes its space, doesnt get lost*/
+    transform: rotate(0);
+    /*no need for negative cos is absolute rotation. With this, we make it straigth under 1028px*/
+  }
+
+  #title .container-fluid {
+    text-align: center;
+    /*we keep this even if its centered at body level*/
+  }
+}
+
+/*CTA*/
+#cta {
+  font-weight: 900;
+}
+
+/*FOOTER*/
+.footer-icon {
+  margin: 2% 1%;
+}
